@@ -1,16 +1,17 @@
-body {
-  background-color: black;
-}
-
 .phone {
-  height: 505px;
-  width: 250px;
+  position: relative;
+  z-index: 1;
+
+  min-height: 505px;
+  min-width: 250px;
 
   padding: 10px;
 
   border-radius: 30px;
 
   background-color: $white;
+
+  margin: 75px 0;
 
   &__screen {
     width: 100%;
@@ -49,29 +50,27 @@ body {
     .content {
       padding: 12px 15px;
 
-      .left {
-        .profile_img {
-          height: 23px;
+      .profile_img {
+        height: 23px;
 
-          border: 1px solid $white;
-          border-radius: 50%;
+        border: 1px solid $white;
+        border-radius: 50%;
 
-          margin-left: 8px;
+        margin-left: 8px;
+      }
+
+      .name {
+        margin-left: 8px;
+
+        h3 {
+          color: $white;
+          font-size: 10px;
+          font-weight: 500;
         }
 
-        .name {
-          margin-left: 8px;
-
-          h3 {
-            color: $white;
-            font-size: 12px;
-            font-weight: 500;
-          }
-
-          p {
-            font-size: 8px;
-            color: $lightMagenta;
-          }
+        p {
+          font-size: 8px;
+          color: $lightMagenta;
         }
       }
 
@@ -226,9 +225,14 @@ body {
   }
 }
 
-.shadow {
+.shadow-chat {
   box-shadow: rgba(50, 50, 93, 0.15) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+}
+
+.phone-shadow {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .leftBg {
@@ -237,4 +241,10 @@ body {
 
 .rightBg {
   background-color: $white;
+}
+
+@media screen and (min-width: 750px) {
+  .phone {
+    margin-right: 120px;
+  }
 }
